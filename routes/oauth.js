@@ -22,10 +22,10 @@ router.post('/generate', async  (req, res) => {
             body: formData,
         });
         const data = await response.json();
-        res.status(200).json({ message: 'Success', data: data })
+        res.status(200).json({ status: 200, message: 'Success', data: data })
     }
     catch (error) {
-        res.status(500).json({ message: 'Internal Server Error', error: error.message })
+        res.status(500).json({ status: 500, message: 'Internal Server Error', error: error.message })
     }
 })
 
